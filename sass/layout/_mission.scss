@@ -1,0 +1,65 @@
+/********* This is for  Mission***********/
+
+.mission__container {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  gap: 10rem;
+  &--details{
+    display:flex;
+    // align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  &--contents {
+    &_title {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 3rem;
+      padding-bottom: 1.8rem;
+      color: var(--title-color);
+    }
+    &_subtitle {
+      padding-bottom: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: var(--title-color);
+    }
+  }
+
+  &--image{
+    align-self: center;
+    display: none;
+  }
+  &--image-2{
+    align-self: center;
+  }
+
+  .mission__container--contents-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .contents__summary{
+        color: var(--title-color);
+        & h2{
+            font-size: 1.5rem;
+            padding-bottom: .8rem;
+        }
+
+        & p{
+            line-height: 1.4;
+            font-size: 1rem;
+        }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .mission__container--details{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .mission__container--image{
+        display: block;
+    }
+}

@@ -1,0 +1,96 @@
+@use "../abstracts" as a;
+// This is About Section
+
+.about {
+  background-color: var(--title-color);
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.5rem;
+    &--services {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      .services {
+        background-color: var(--container-color);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        padding: 2.5rem 6rem;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: var(--title-color);
+        transform: translateY(-42%);
+        transition: all 0.4s ease-in-out;
+        & i {
+          font-size: 2rem;
+        }
+        & h2 {
+          font-weight: 700;
+        }
+        & p {
+          font-size: 1.09rem;
+          text-align: center;
+          line-height: 1.5;
+        }
+      }
+      .services:hover {
+        transform: translateY(-50%);
+      }
+    }
+
+    &--achievement {
+      color: #fff;
+      text-align: center;
+      & h2 {
+        font-size: 2.7rem;
+        padding-bottom: 1.2rem;
+        font-weight: 400;
+      }
+      & p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+
+    &--number {
+      margin: 2rem 0;
+      display: grid;
+      align-items: center;
+      gap: 2rem;
+      // color: #fff;
+      text-align: center;
+      & .number h2 {
+        font-size: 3.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+  .about__container--services {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    .services {
+      padding: 1.5rem 2rem;
+    }
+  }
+  .about__container--number {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10rem;
+  }
+}
+@media screen and (min-width: 968px) {
+  .about__container--services {
+    gap: 4rem;
+    .services {
+      padding: 1.5rem 2rem;
+    }
+  }
+}

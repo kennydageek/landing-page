@@ -1,0 +1,103 @@
+@use '../abstracts' as a;
+// This is home section 
+.home__container{
+    align-items: center; 
+
+    &--contents{
+    &_title{
+        font-size: 2.25rem;
+        line-height: 3rem;
+        padding-bottom: 1.5rem;
+        color: var(--text-color-light);
+    }
+    &_subtitle{
+        padding-bottom: 1rem;
+        font-size: .95rem;
+        line-height: 1.4;
+        color: var(--title-color);
+    }
+    &_button{
+        border: none;
+        outline: none;
+        background: #000;
+        padding: .8rem 1rem;
+        border-radius: 5px;
+        font-size: .9rem;
+        transition:.4s ease-in-out;
+        cursor: pointer;
+        & a{
+            color:#fff;
+            display:flex;
+            align-items: center;
+            gap: .4rem;
+        }
+        & span i{
+            font-size: .6rem;
+        }
+    }
+    &_button:hover{
+        transform: translateX(2%);
+    }
+    }
+
+    &--image{
+      
+        .home-img{
+            object-fit: contain;
+        }
+    }
+
+}
+@media screen and (min-width: 576px) {
+
+}
+@media screen and (min-width: 768px) {
+    .home__container{
+        grid-template-columns: repeat(2, 1fr);
+        &--contents{
+            &_title{
+                font-size: 2.5rem;
+            }
+            &_subtitle{
+                font-size: 1.1rem;
+            }
+        }
+        &--image{
+            .home-img{
+                width: 500px;
+            }
+        }
+    }
+
+    .home-img{
+        object-fit: contain;
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 968px) {
+        .home__container{
+        grid-template-columns: repeat(2, 1fr);
+        &--contents{
+            &_title{
+                font-size: 2.8rem;
+            }
+            &_subtitle{
+                font-size: 1.3rem;
+            }
+        }
+        &--image{
+            .home-img{
+                width: 500px;
+            }
+        }
+    }
+
+        .home-img{
+        object-fit: contain;
+        width: 500px;
+    }
+}
+@media screen and (min-width: 1024px) {
+
+}
